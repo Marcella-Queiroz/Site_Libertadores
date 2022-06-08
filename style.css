@@ -1,0 +1,113 @@
+body {
+    /* cor do fundo */
+    background-color: #ccc;
+    /* retirar a margem do body */
+    margin: 0;
+    /* mudar a fonte do site */
+    font-family: Arial, Verdana;
+}
+header, footer {
+    /* largura */
+    width: 100%;
+    background-color: #fff;
+    /* sombra: distancia esquerda direita, distancia cima-baixo, opacidade, cor da somba */
+    box-shadow: 0 0 20px #666;
+    /* margem interna ?*/
+    padding: 10px;
+    box-sizing: border-box;
+}
+header nav {
+    /* jogar para a direita */
+    float: right;
+}
+header nav ul {
+    /* retirar os marcadores */
+    list-style: none;
+    /* zerar margem e padding */
+    margin: 0;
+    padding: 0%;
+}
+header nav ul li {
+    /* alinhado um ao lado do outro */
+    display: inline-block;
+    /* margem */
+    margin: 35px;
+}
+header nav ul li a {
+    color: #333;
+    /* retirar sublinhado */
+    text-decoration: none;
+    /* adicionar uma transição */
+    transition: all 1s;
+}
+header nav ul li a:hover {
+    color:#f00;
+    /* devolver o sublinhado */
+    text-decoration: underline;
+}
+footer p {
+    /* alinhar ao centro */
+    text-align: center;
+}
+.center {
+    text-align: center;
+}
+.grid-times{
+    display:grid;
+    grid-template-columns: repeat(7,14.28%);
+}
+.grid-times .coluna{
+    background-color: #fff;
+    margin: 50px 5px;
+    border-radius: 10px;
+    border:1px solid #333;
+    padding: 5px;
+}
+.grid-times .coluna.img{
+    width: 95%;
+}
+p{
+    text-align: justify;
+    line-height: 25px;
+}
+.grid-times .center p {
+    text-align: center;
+}
+@media (max-width:450px){
+    body{
+        background-color: aliceblue;
+    }
+    .grid-times{
+        grid-template-columns: repeat(2,50%)
+    }
+    .grid-times coluna img{
+        width: 80%;
+    }
+    .grid-times .coluna{
+        margin: 10px 5px;
+    }
+    header img{
+        width: 300px;
+    }
+    header{
+        text-align: center;
+        display: inline-block;
+    }
+    header nav ul li {
+        margin: 5px;
+    }
+}/*fim do media querie*/
+@media (min-width: 450px) and (max-width:1024px){
+    body{
+        background-color: yellow;
+    }
+    header {
+        display: inline-block;
+    }
+    header nav ul li{
+        margin: 25px;
+    }
+    .grid-times {
+        grid-template-columns: repeat(4,25%);
+    }
+}
